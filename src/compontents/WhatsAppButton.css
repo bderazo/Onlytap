@@ -1,0 +1,23 @@
+/* WhatsAppButton.css */
+button {
+  background-color: #25d366; /* Color verde de WhatsApp */
+  color: #fff; /* Texto en blanco para contrastar con el fondo */
+  border: none; /* Eliminamos el borde */
+  padding: 10px 20px; /* Ajustamos el espacio interno */
+  display: flex; /* Hacemos que el ícono y el texto se muestren en línea */
+  align-items: center; /* Alineamos verticalmente el ícono y el texto */
+  font-size: 16px; /* Tamaño del texto */
+  cursor: pointer; /* Cambiamos el cursor al pasar sobre el botón */
+  border-radius: 20px; /* Añadimos esquinas redondeadas */
+}
+
+button:hover {
+  background-color: #128c7e; /* Cambiamos el color de fondo al pasar el cursor */
+}
+
+/* Estilos para el ícono */
+button svg {
+  margin-right: 8px; /* Añadimos espacio entre el ícono y el texto */
+  width: 24px; /* Tamaño del ícono */
+  height: 24px;
+}

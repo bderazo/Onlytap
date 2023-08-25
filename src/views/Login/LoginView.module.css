@@ -1,0 +1,114 @@
+
+
+
+.imagenLogin {
+    background-image: url(../../assets/img/fondo.png);
+    background-position: center;
+}
+
+.passwordField {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    margin-bottom: 0.4rem;
+}
+
+.passwordInput {
+    position: relative;
+}
+
+input {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: #f3f3f3;
+    font-size: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    margin-top: 0.25rem;
+}
+
+svg {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0.5rem;
+    cursor: pointer;
+}
+
+.loadingSpinner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+  }
+  
+  .loadingSpinner > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 50px;
+  }
+  
+  .loadingSpinner .spinner {
+    margin-right: -10px;
+  }
+
+  .alertContainer {
+    background-color: #f44336;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .alertMessage {
+    font-weight: bold;
+  }
+
+  @media screen and (max-width: 768px) {
+
+
+    .imagenLogin {
+      background-size: cover;
+      background-repeat: no-repeat;
+      min-height: 100vh;
+      margin-bottom: 1rem;
+    }
+  
+  
+    .passwordField {
+      margin: 0.5rem 0;
+    }
+  
+  
+    label {
+      font-size: 0.8rem;
+    }
+  
+  
+    input {
+      font-size: 0.9rem;
+      padding: 0.4rem 0.8rem;
+    }
+  
+  
+    .loadingSpinner > div {
+      height: 30px;
+      width: 30px;
+    }
+  }
+  
+  

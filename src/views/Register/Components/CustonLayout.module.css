@@ -1,0 +1,55 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.linea {
+  display: flex;
+  width: 470px
+}
+
+@media screen and (max-width: 992px) {
+  .container {
+    max-width: 960px;
+    padding: 0 15px;
+  }
+
+  .linea {
+    display: flex;
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    max-width: 720px;
+    padding: 0 15px;
+  }
+
+  .linea {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .linea div {
+    flex-basis: calc(30% - 20px);
+    margin: 2px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .container {
+    max-width: 540px;
+    padding: 0 15px;
+  }
+
+  .linea {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .linea div {
+    flex-basis: calc(50% - 10px);
+    margin: 2px;
+  }
+}

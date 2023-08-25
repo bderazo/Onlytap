@@ -1,0 +1,725 @@
+.input-container {
+  display: relative;
+  align-items: center;
+  justify-content: center;
+  max-width: 500px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.page-background {
+  background-color: #f2f2f2;
+}
+
+/* MODAL */
+.modal-container {
+  -webkit-animation: scale-in-center 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+    both;
+  animation: scale-in-center 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+
+@-webkit-keyframes scale-in-center {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 1;
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes scale-in-center {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 1;
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.modal-body {
+  box-shadow: 5px 5px 5px 5px rgba(68, 67, 67, 0.2);
+  background-color: rgb(252, 252, 252);
+  margin: 10% auto;
+  padding: 10px;
+  border: 1px solid #afafaf;
+  width: 27%;
+}
+
+.input-register {
+  background-color: #f5f5f7;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  width: 100%;
+  max-width: 500px;
+  margin-right: 10px;
+}
+
+.input-register:focus {
+  outline: none;
+  box-shadow: 0px 0px 0px 3px #68b1ff;
+  background-color: #fff;
+}
+
+::placeholder {
+  color: #c7c7cc;
+}
+
+.imagen-register {
+  width: 150;
+}
+
+.submit-button {
+  background-color: #fff;
+  border: 2px solid #68b1ff;
+  color: #4a4a4a;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px;
+  border-radius: 25px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.form-floating {
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+}
+
+.form-floating img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.image-preview-container {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border: 2px dashed grey;
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-preview-container img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+.image-preview-container .remove-image-button {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: red;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.linea-botones {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 600px) {
+  .linea-botones {
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 900px) {
+  .linea-botones {
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .linea-botones {
+    flex-direction: row;
+  }
+}
+
+.submit-button:focus {
+  outline: none;
+  box-shadow: 0px 0px 0px 3px #007aff;
+}
+
+.submit-button:active {
+  background-color: #0062cc;
+  color: #fff;
+  border-color: #0062cc;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.4) inset;
+}
+
+.cancel-button {
+  background-color: #fff;
+  border: 2px solid #ed0000;
+  color: #4a4a4a;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px;
+  border-radius: 25px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.cancel-button:hover {
+  background-color: #ff0000;
+  color: #fff;
+  border-color: #ff0000;
+  cursor: pointer;
+}
+
+.cancel-button:focus {
+  outline: none;
+  box-shadow: 0px 0px 0px 3px #ff0000;
+}
+
+.cancel-button:active {
+  background-color: #cc0000;
+  color: #fff;
+  border-color: #cc0000;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.4) inset;
+}
+
+@media screen and (max-width: 600px) {
+  .modal-body {
+    width: 100%;
+    margin: 10px auto;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 900px) {
+  .modal-body {
+    width: 50%;
+    margin: 10% auto;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .modal-body {
+    width: 27%;
+    margin: 10% auto;
+  }
+}
+
+/* FIN MODAL*/
+
+/* card*/
+.card {
+  width: 90%;
+  /* Ajustamos el ancho a un 90% para que se adapte mejor a pantallas más pequeñas */
+  max-width: 400px;
+  /* Establecemos un ancho máximo para evitar que la tarjeta se vuelva demasiado grande */
+  margin: 0 auto;
+  /* Centramos el elemento horizontalmente */
+}
+
+.author .avatar {
+  display: flex;
+  justify-content: flex-end;
+  /* margin-top: -70px; */
+  margin-top: -19%;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 480px) {
+  .author-avatar {
+    width: 50px;
+    height: 50px;
+    margin-top: -45px;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .author-avatar {
+    width: 80px;
+    height: 80px;
+    margin-top: -72px;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .author-avatar {
+    width: 100px;
+    height: 100px;
+    margin-top: -90px;
+  }
+}
+
+.input-container-card {
+  position: relative;
+  max-width: 100%;
+}
+
+.input-container-card:hover {
+  border: 1px solid rgba(255, 0, 0, 0.5);
+}
+
+@media screen and (max-width: 480px) {
+  .input-container-card {
+    max-width: 100%;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .input-container-card {
+    max-width: 80%;
+  }
+}
+
+.input-card {
+  border: none;
+  outline: none;
+  box-shadow: none;
+  background-color: transparent;
+  width: 100%;
+  font-size: 1.2em;
+}
+
+@media only screen and (max-width: 600px) {
+  .input-card {
+    font-size: 1em;
+  }
+}
+
+.delete-button-card {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0;
+  margin: 0.5em 0;
+  border: none;
+  background-color: transparent;
+  color: red;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  height: 1em;
+}
+
+.input-container-card:hover .delete-button-card {
+  opacity: 1;
+}
+
+@media screen and (max-width: 640px) {
+  .input-container-card {
+    position: relative;
+  }
+
+  .delete-button-card {
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: none;
+    height: 2em;
+    width: 2em;
+    font-size: 1em;
+  }
+
+  .input-container-card:hover .delete-button-card {
+    opacity: 1;
+  }
+}
+
+@media screen and (min-width: 641px) and (max-width: 1024px) {
+  .input-container-card {
+    position: relative;
+  }
+
+  .delete-button-card {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 1.5em;
+    width: 1.5em;
+    font-size: 0.8em;
+  }
+
+  .input-container-card:hover .delete-button-card {
+    opacity: 1;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .input-container-card:hover .delete-button-card {
+    opacity: 1;
+  }
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-icon-container {
+  position: relative;
+  margin: 10px;
+  width: 36px; /* Adjust the width to your desired size */
+  height: 36px; /* Adjust the height to your desired size */
+  border-radius: 15%; /* This will make the container a circle, but you can also use a fixed value like 5px for rounded corners */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid white;
+  background: #efefef;
+  border-radius: 10px;
+}
+
+.social-icon {
+  width: 100%;
+  height: 100%;
+  padding: 3px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.social-icon:hover {
+  transform: translateY(-10px);
+}
+
+.hovered {
+  transform: translateY(-10px);
+}
+
+@media screen and (min-width: 1025px) {
+  .social-icon-container:hover .social-icon {
+    transform: translateY(-10px);
+  }
+}
+
+.icon-text {
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  font-size: 14px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+.basurero {
+  width: 30px;
+  height: 30px;
+  background-color: #f44336;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  z-index: 1;
+}
+
+@media screen and (max-width: 640px) {
+  .icon-text {
+    font-size: 12px;
+    padding: 2px 4px;
+  }
+
+  .basurero {
+    width: 20px;
+    height: 20px;
+    bottom: 5px;
+    right: 5px;
+  }
+}
+
+@media screen and (min-width: 641px) and (max-width: 1024px) {
+  .icon-text {
+    font-size: 14px;
+    padding: 4px 6px;
+  }
+
+  .basurero {
+    width: 25px;
+    height: 25px;
+    bottom: 8px;
+    right: 8px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .icon-text {
+    font-size: 16px;
+    padding: 6px 8px;
+  }
+
+  .basurero {
+    width: 30px;
+    height: 30px;
+    bottom: 10px;
+    right: 10px;
+  }
+}
+
+.dragging {
+  opacity: 0.5;
+}
+
+:root {
+  --button-size: 68px;
+  --button-size-small: 50px;
+  --button-size-medium: 60px;
+  --button-border-radius: 4px;
+  --button-padding: 7px 14px;
+  --button-padding-small: 5px 10px;
+  --button-max-width: 200px;
+  --button-max-width-small: 150px;
+  --button-margin: 10px;
+  --button-margin-small: 5px;
+  --button-font-size: 16px;
+  --button-font-size-small: 14px;
+}
+
+.button-group {
+  align-items: center;
+  background-color: #ffffff;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.button {
+  border: none;
+  border-radius: var(--button-border-radius);
+  color: #000;
+  cursor: pointer;
+  font-size: var(--button-font-size);
+  margin: var(--button-margin);
+  max-width: var(--button-max-width);
+  padding: var(--button-padding);
+}
+
+.button-center {
+  align-self: flex-start;
+  background-color: #c7c7cc;
+  border-radius: 100%;
+  height: var(--button-size);
+  margin: 0 var(--button-margin);
+  width: var(--button-size);
+}
+
+@media screen and (max-width: 640px) {
+  .button {
+    font-size: var(--button-font-size-small);
+    margin: var(--button-margin-small);
+    max-width: var(--button-max-width-small);
+    padding: var(--button-padding-small);
+  }
+
+  .button-center {
+    font-size: 12px;
+    height: var(--button-size-small);
+    margin: 0 var(--button-margin);
+    width: var(--button-size-small);
+  }
+}
+
+@media screen and (min-width: 641px) and (max-width: 1024px) {
+  .button-center {
+    height: var(--button-size-medium);
+    margin: 0 var(--button-margin-medium);
+    width: var(--button-size-medium);
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .button-center {
+    font-size: var(--button-font-size);
+    height: var(--button-size);
+    margin: 0 var(--button-margin-large);
+    width: var(--button-size);
+  }
+}
+
+@keyframes phone-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(8deg);
+  }
+
+  50% {
+    transform: rotate(0deg);
+  }
+
+  75% {
+    transform: rotate(-8deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.phone-icon {
+  width: 45px;
+  height: 45px;
+}
+
+.phone-icon:hover {
+  animation: phone-ring 1s infinite;
+}
+
+/* FIN card*/
+
+.form {
+  width: 65%;
+  height: 100vh;
+}
+
+@media screen and (max-width: 991px) {
+  .form {
+    width: 100%;
+    height: 100vh;
+  }
+}
+
+.tarjeta-home {
+  width: 40%;
+  margin: 0;
+  padding: 0;
+}
+
+@media only screen and (max-width: 768px) {
+  .tarjeta-home {
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .tarjeta-home {
+    width: 90%;
+    top: 300px;
+  }
+}
+
+/* DESEÑO SOLO TELEFONO */
+.react-phone-input {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.react-phone-input input[type="tel"] {
+  font-size: 16px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+.react-phone-input .flag-dropdown {
+  width: 40px;
+  height: 28px;
+  margin-right: 5px;
+}
+
+.react-phone-input .selected-flag {
+  width: 40px;
+  height: 28px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.react-phone-input .country-list {
+  position: absolute;
+  top: 45px;
+  left: 0;
+  right: 0;
+  border: 1px solid #ccc;
+  border-top: none;
+  border-radius: 0 0 5px 5px;
+  background-color: white;
+  max-height: 200px;
+  overflow: auto;
+  z-index: 999;
+}
+
+.react-phone-input .country-list > div {
+  padding: 5px;
+  cursor: pointer;
+}
+
+.react-phone-input .country-list > .highlight {
+  background-color: #ccc;
+}
+
+/* FIN DESEÑO SOLO TELEFONO */
+
+.alert-container {
+  background-color: #f44336;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.alertMessage {
+  font-weight: bold;
+}
+
+.icon-table {
+  position: absolute;
+  right: 270px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fff;
+  padding: 35px;
+  width: 27%;
+  text-align: center;
+}

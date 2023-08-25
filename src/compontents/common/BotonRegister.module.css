@@ -1,0 +1,73 @@
+.botonesRegister {
+  display: inline-block;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  color: #000000;
+  border: none;
+  transition: all 0.1s;
+  cursor: pointer;
+  background-color: #f2f8fa;
+  width: 100%;
+  max-width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .botonesRegister {
+    width: auto;
+    max-width: none;
+  }
+}
+
+.botonesRegister p {
+  max-width: 100%;
+  white-space: normal;
+}
+
+.botonesRegister:hover {
+  
+  background: #d1d3d3;
+  border: none;
+  
+  box-shadow: 0 0 10px #939393;
+  border-image: linear-gradient(to bottom, #e6e5e5, #d1d3d3) 1;
+  color: rgb(1, 1, 1);
+}
+
+.botonesRegisterD {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  color: #000000;
+  border: none;
+  transition: all 0.1s;
+  cursor: pointer;
+  background-color: #dadada;
+  width: 100%;
+  max-width: 100%;
+}
+
+.botonesRegisterD p {
+  max-width: 100%;
+  white-space: normal;
+}
+
+@media screen and (min-width: 768px) {
+  .botonesRegisterD {
+    width: auto;
+    max-width: none;
+  }
+}
+
+
+@media screen and (min-width: 1200px) {
+  .botonesRegisterDisabled{
+    padding: 1.2rem 3.5rem;
+  }
+} 
+
+
+.botonesRegister:active {
+  border: none;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+}
